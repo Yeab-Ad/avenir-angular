@@ -1,0 +1,16 @@
+<form #search="ngForm" (ngSubmit)="_api.SetData(searchInput.value)">
+  <div class="search cont">
+    <!-- (click)="util.closeSearch()" -->
+    <input
+      style="border: none"
+      type="text"
+      name="search"
+      #searchInput
+      (change)="_api.SetData(searchInput.value)"
+      (keyup)="_api.SetData(searchInput.value)"
+      placeholder="Search for Music "
+      value="{{ _api.default_value ? _api.default_value : '' }}"
+    />
+    <button type="submit">Search</button>
+  </div>
+</form>

@@ -8,8 +8,9 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   constructor(private http: HttpClient, private _utill: UtillService) {
-    this.SetData();
+    this.SetData(this.default_value);
   }
+  default_value = 'burger';
   url = 'https://staging.tikusdelivery.com/api/searchDishesAndRestaurants';
   getDatas: any;
   dishesList: any;
@@ -20,14 +21,13 @@ export class ApiService {
     return this.http.post(this.url, form);
   }
 
-  SetData() {
-    ///loading
+  SetData(SearchValue: string) {
     const timeout = setTimeout(() => {
       this._utill.isLoading = true;
     }, 500);
 
     const form = new FormData();
-    form.append('restaurantName', 'burger');
+    form.append('restaurantName', SearchValue);
     form.append('latitude', '9.003869');
     form.append('longitude', '38.780127');
     form.append('pageNumber', '1');

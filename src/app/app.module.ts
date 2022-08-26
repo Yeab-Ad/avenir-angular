@@ -8,10 +8,17 @@ import { AppComponent } from './app.component';
 import { RestaurantsComponent } from './Components/restaurants/restaurants.component';
 import { DishesComponent } from './Components/dishes/dishes.component';
 import { ApiService } from './Services/API/api.service';
+import { SearchComponent } from './Components/search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, RestaurantsComponent, DishesComponent],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    RestaurantsComponent,
+    DishesComponent,
+    SearchComponent,
+  ],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [ApiService, UtillService],
   bootstrap: [AppComponent],
 })
