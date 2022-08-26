@@ -1,1 +1,99 @@
 /* You can add global styles to this file, and also import other style files */
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: system-ui;
+  //   font-family: system-ui;
+  //   font-weight: 100;
+  scroll-behavior: smooth;
+  transition: 0.5s;
+  --scrollbarBG: #cfd8dc;
+  --thumbBG: #90a4ae;
+  transition: 0.5s;
+}
+// .display {
+//   opacity: 1 !important;
+//   transform: translateZ(0);
+// }
+// .display_none {
+//   opacity: 0;
+//   transform: translateZ(100rem);
+// }
+
+@keyframes identifier {
+  from {
+    transform: translateY(5rem) scale(0.9);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    //   transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.overflow_hidden {
+  overflow: hidden !important;
+  height: 95vh !important;
+  .items {
+    // overflow: hidden;
+  }
+}
+
+.skeleton,
+#skeleton {
+  background: linear-gradient(
+    120deg,
+    #e5e5e5 30%,
+    #f2f2f2 38%,
+    #f2f2f2 40%,
+    #e5e5e5 48%
+  );
+  background-size: 200% 100% !important;
+  background-repeat: initial !important;
+  background-position: 100% 0;
+  border-radius: 7px;
+  color: #e5e5e5 !important;
+  animation: load 2s infinite;
+
+  &::after {
+    display: none !important;
+  }
+}
+.loadingOFF {
+  background: #ffffff47;
+}
+@keyframes load {
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 6px;
+  height: 1rem;
+  // background: ;
+}
+::-webkit-scrollbar-track {
+  background: #dee1e77d;
+  width: 5px;
+  border-radius: 3px;
+  // margin-top: 3px;
+  margin-right: 5px;
+  // padding: 1rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #c5c5c5f1;
+  border-radius: 4px;
+  border: 2px solid #dee1e732;
+}

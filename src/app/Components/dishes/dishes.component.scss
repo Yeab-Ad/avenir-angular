@@ -1,0 +1,61 @@
+section {
+  margin: 0;
+  animation: identifier 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  .dish-cont {
+    margin: 0;
+    gap: 1rem;
+    flex-wrap: wrap;
+    height: 65vh;
+    overflow: auto;
+    padding: 1rem;
+
+    .items {
+      height: 6rem;
+      border: 1px solid #00000021;
+      box-shadow: 0 0 10px #00000024;
+      border-radius: 6px;
+      overflow: hidden;
+      .image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 160px;
+      }
+      .contents {
+        width: 73%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+
+        .item-disc {
+          margin: 0;
+          gap: 1rem;
+
+          .name {
+            font-weight: 600;
+          }
+          .price {
+            font-weight: 600;
+            color: #00aa62;
+          }
+        }
+
+        button {
+          padding: 5px 10px;
+          border-radius: 50px;
+          background: #00aa62;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          color: white;
+
+          &:hover {
+            box-shadow: 0 0 10px rgb(0 0 0 / 70%);
+          }
+        }
+      }
+    }
+  }
+}

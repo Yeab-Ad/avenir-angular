@@ -1,0 +1,36 @@
+<section class="display_none">
+  <div *ngIf="_utill.isLoading == false" class="dish-cont grid">
+    <div *ngFor="let item of _api.dish" class="items flex">
+      <div
+        [ngStyle]="{
+          'background-image': ' url(' + item.image + ')'
+        }"
+        class="image"
+      ></div>
+      <div class="flex contents">
+        <div class="grid item-disc">
+          <div class="name">{{ item.name }}</div>
+          <div class="price">{{ item.price }}</div>
+        </div>
+        <button>
+          {{ item.isAvailable == "true" ? "ADD" : "Not Available" }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- // loading -->
+
+  <div *ngIf="_utill.isLoading" class="dish-cont grid overflow_hidden">
+    <div *ngFor="let item of [0, 3, 3, 2, 4, 5, 3, 3]" class="items flex">
+      <div class="skeleton image"></div>
+      <div class="flex contents">
+        <div class="grid item-disc">
+          <div class="skeleton name">restaurantName</div>
+          <div class="skeleton price">20 birr</div>
+        </div>
+        <button id="skeleton" class="skeleton">Not Available</button>
+      </div>
+    </div>
+  </div>
+</section>
