@@ -36,6 +36,8 @@ export class ApiService {
         this.getDatas = data;
         this.listRestaurants = this.getDatas.listRestaurants;
 
+        this.dish = [];
+
         for (let i in this.getDatas.listDishes) {
           for (let j in this.getDatas.listDishes[i].dishesList) {
             this.dish?.push(this.getDatas.listDishes[i].dishesList[j]);
