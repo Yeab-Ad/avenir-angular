@@ -1,5 +1,8 @@
 # AvenirAngular
 
+<a href="https://avenir-angular.netlify.app/" target="_blank" rel="noopener noreferrer">Project URL</a>
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
 ## Development server
